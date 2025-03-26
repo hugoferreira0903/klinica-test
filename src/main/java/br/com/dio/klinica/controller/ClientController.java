@@ -49,6 +49,7 @@ public class ClientController {
         return mapper.toUpdateResponse(entity);
     }
 
+
     @DeleteMapping("{id}")
     @ResponseStatus(NO_CONTENT)
     ResponseEntity<String> delete(@PathVariable final long id){
