@@ -2,6 +2,7 @@ package br.com.dio.klinica.controller;
 
 
 import br.com.dio.klinica.controller.request.SaveClientRequest;
+import br.com.dio.klinica.controller.request.UpdateClientRequest;
 import br.com.dio.klinica.controller.request.UpdateMedicoRequest;
 import br.com.dio.klinica.controller.response.ClientDetailResponse;
 import br.com.dio.klinica.controller.response.ListClientResponse;
@@ -43,7 +44,7 @@ public class ClientController {
     }
 
     @PutMapping("{id}")
-    UpdateClientResponse update(@PathVariable final long id, @RequestBody @Valid final UpdateMedicoRequest request){
+    UpdateClientResponse update(@PathVariable final long id, @RequestBody @Valid final UpdateClientRequest request){
         var entity = mapper.toEntity(id, request);
         service.update(entity);
         return mapper.toUpdateResponse(entity);

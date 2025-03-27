@@ -1,7 +1,7 @@
 package br.com.dio.klinica.mapper;
 
 import br.com.dio.klinica.controller.request.SaveClientRequest;
-import br.com.dio.klinica.controller.request.UpdateMedicoRequest;
+import br.com.dio.klinica.controller.request.UpdateClientRequest;
 import br.com.dio.klinica.controller.response.ClientDetailResponse;
 import br.com.dio.klinica.controller.response.ListClientResponse;
 import br.com.dio.klinica.controller.response.SaveClientResponse;
@@ -21,7 +21,7 @@ public interface IClientMapper {
 
     SaveClientResponse toSaveResponse(final ClientEntity entity);
 
-    ClientEntity toEntity(final long id, final @Valid UpdateMedicoRequest request);
+    ClientEntity toEntity(final long id, final @Valid UpdateClientRequest request);
 
     UpdateClientResponse toUpdateResponse(final ClientEntity entity);
 
